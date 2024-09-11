@@ -8,7 +8,7 @@ def projeto_view(request):
 
     if search:
         projeto = Portfolio.objects.filter(name__contains= search)
-    return render(request, 'resultados.html', {'projeto' : projeto}) 
+    return render(request, 'index.html', {'projeto' : projeto}) 
 
 def form_view(request):
     if request.method == 'POST':
